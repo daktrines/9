@@ -1,0 +1,66 @@
+﻿<Window x:Class="_9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_9"
+        mc:Ignorable="d"
+        Title="9" Height="450" Width="608">
+    <Window.Background>
+        <ImageBrush ImageSource="pink-background-with-palm-tree.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <Menu HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="164" FontStyle="Italic">
+            <Menu.Background>
+                <ImageBrush/>
+            </Menu.Background>
+            <MenuItem Header="О программе" Height="20" Width="164" FontWeight="Bold" FontStyle="Italic" FontSize="14"  >
+                <MenuItem.Background>
+                    <ImageBrush/>
+                </MenuItem.Background>
+                <MenuItem Header="Информация" Click="Info_Click"   />
+                <MenuItem Header="Выход" Click="Выход_Click"  />
+            </MenuItem>
+        </Menu>
+        <GroupBox Header="Дополнительно" HorizontalAlignment="Left" Height="212" Margin="10,197,0,0" VerticalAlignment="Top" Width="294" FontWeight="Bold" FontStyle="Italic" FontSize="14">
+            <Grid  >
+                <TextBox x:Name="N" HorizontalAlignment="Left" Height="23" Margin="49,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" FontStyle="Italic" FontSize="12" FontWeight="Normal"/>
+                <TextBox x:Name="FIO" HorizontalAlignment="Left" Height="23" Margin="64,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" FontStyle="Italic" FontSize="12" FontWeight="Normal"/>
+                <TextBox x:Name="Pol" HorizontalAlignment="Left" Height="23" Margin="64,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" FontStyle="Italic" FontSize="12" FontWeight="Normal"/>
+                <TextBox x:Name="Year" HorizontalAlignment="Left" Height="23" Margin="132,94,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="136" FontStyle="Italic" FontSize="12" FontWeight="Normal"/>
+                <TextBox x:Name="Country" HorizontalAlignment="Left" Height="23" Margin="132,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" FontStyle="Italic" FontSize="12" FontWeight="Normal"/>
+                <TextBox x:Name="Nacion" HorizontalAlignment="Left" Height="23" Margin="132,153,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="136" FontStyle="Italic" FontSize="12" FontWeight="Normal"/>
+                <Button Content="Заполнить" HorizontalAlignment="Left" Margin="106,4,0,0" VerticalAlignment="Top" Width="162" Click="Заполнить_Click" Height="23">
+                    <Button.Background>
+                        <ImageBrush/>
+                    </Button.Background>
+                </Button>
+                <Label Content="№" HorizontalAlignment="Left" Margin="10,1,0,0" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.549,0.628" FontSize="12"/>
+                <Label Content="ФИО -" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top" Width="54" Height="23" FontSize="12"/>
+                <Label Content="Пол -" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Width="42" FontSize="12"/>
+                <Label Content="Год рождения -" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" Width="106" FontSize="12"/>
+                <Label Content="Место рождения -" HorizontalAlignment="Left" Margin="10,122,0,0" VerticalAlignment="Top" Width="117" FontSize="12"/>
+                <Label Content="Национальность -" HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top" Width="117" FontSize="12"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Расчет" HorizontalAlignment="Left" Height="212" Margin="309,197,0,0" VerticalAlignment="Top" Width="282" FontWeight="Bold" FontStyle="Italic" FontSize="14">
+            <Grid >
+                <Button Content="Расчитать" HorizontalAlignment="Left" Margin="56,29,0,0" VerticalAlignment="Top" Width="159" FontSize="14" FontStyle="Italic" FontWeight="Bold" Height="29" Click="Расчитать_Click">
+                    <Button.Background>
+                        <ImageBrush/>
+                    </Button.Background>
+                </Button>
+                <TextBox x:Name="Rez" IsReadOnly="True" HorizontalAlignment="Left" Height="30" Margin="56,77,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="159"/>
+                <Button Content="Очистить" HorizontalAlignment="Left" Margin="56,124,0,0" VerticalAlignment="Top" Width="159" FontSize="14" FontStyle="Italic" FontWeight="Bold" Height="29" Click="Очистить_Click">
+                    <Button.Background>
+                        <ImageBrush/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+        </GroupBox>
+        <DataGrid x:Name="dataGrid" CanUserAddRows="false" CanUserResizeColumns="True" HorizontalAlignment="Left" Height="163" Margin="10,29,0,0" VerticalAlignment="Top" Width="581"/>
+    </Grid>
+</Window>
