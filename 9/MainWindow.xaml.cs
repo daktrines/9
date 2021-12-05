@@ -76,16 +76,15 @@ namespace _9
 
         private void Расчитать_Click(object sender, RoutedEventArgs e)
         {
-            int rez = 0, kol = 0, age = 0, sum = 0;
-           
-                for (int i = 0; i < 5; i++)
-                {
-                    age = 2021 - Convert.ToInt32(human[i].Year); //находим возраст
-                    sum = sum + age;
-                    kol++;
-                }
-            rez = sum / kol;
-            Rez.Text = rez.ToString();
+           int rez, kol = 0, age, sum = 0;
+           for (int j = 0; j < 5; j++)
+           {
+               age = 2021 - Convert.ToInt32(human[j].Year); //находим возраст
+               sum = sum + age;
+               kol++;
+           }
+           rez = sum / kol;
+           Rez.Text = rez.ToString();
         }
 
         private void Очистить_Click(object sender, RoutedEventArgs e)
