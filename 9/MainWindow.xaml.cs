@@ -79,7 +79,7 @@ namespace _9
            int rez, kol = 0, age, sum = 0;
            for (int j = 0; j < 5; j++)
            {
-               age = 2021 - Convert.ToInt32(human[j].Year); //находим возраст
+               age = 2021 - human[j].Year; //находим возраст
                sum = sum + age;
                kol++;
            }
